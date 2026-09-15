@@ -1,7 +1,5 @@
 <?php
-$heading = 'About me';
 
+$heading = 'About Us';
 
-
-
-require 'Views/AboutView.php';
+require "views/about.view.php";
