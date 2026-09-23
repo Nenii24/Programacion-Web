@@ -7,7 +7,7 @@
         <?php if (isset($note)): ?>
             <li>
                 <a href= "/note?id=<?= $note['id'] ?>">
-                    <?= $note['body'] ?>
+                    <?= htmlspecialchars($note['body']) ?>
                 </a>
             </li>
         <?php endif; ?>

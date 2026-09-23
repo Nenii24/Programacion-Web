@@ -16,7 +16,12 @@
                                 <div class="mt-1">
                                     <input type="text" name="title" id="title" autocomplete="title"
                                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                            placeholder="Your title..."></input>
+                                            placeholder="Your title..."
+                                            required>
+                                    </input>
+                                    <?php if (isset($errors['title'])): ?>
+                                        <p class="text-red-500 text-xs mt-1"><?= $errors['title'] ?></p>
+                                    <?php endif; ?>
                                 </div>
 
                                 <label for="body" class="block text-sm font-medium text-gray-700">Body</label>
@@ -24,7 +29,12 @@
                                 <div class="mt-1">
                                     <textarea id="body" name="body" rows="3"
                                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                            placeholder="Here's an idea for a note..."></textarea>
+                                            placeholder="Here's an idea for a note..."
+                                            required>
+                                    </textarea>
+                                    <?php if (isset($errors['body'])): ?>
+                                        <p class="text-red-500 text-xs mt-1"><?= $errors['body'] ?></p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
